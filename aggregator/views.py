@@ -32,7 +32,8 @@ def get_the_news():
         image = ''
         if not c:
             c = card.find('div', 'Bdrs(2px)')
-            img = c['style'].split(';')[1].split('(')[1]
+            print(c)
+            img = c.get('style').split(';')[1].split('(')[1]
             img = img[:-1]
             image = img
         else:
